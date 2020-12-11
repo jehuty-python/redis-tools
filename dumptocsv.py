@@ -233,12 +233,8 @@ def main():
                 if args.pod_lookup:
                     stage3_output = ip_resolver(ip_to_name_map, **stage2_output)
                     csv_writerow(output_file, header=header, **stage3_output)
-                if DEBUG:
-                    print(stage2_output)
                 else:
                     csv_writerow(output_file, header=header, **stage2_output)
-
-            output_file.close()
 
 if __name__ == '__main__':
     main()
